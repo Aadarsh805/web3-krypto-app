@@ -15,12 +15,6 @@ const getEthereumContract = () => {
     contractABI,
     signer
   );
-
-  console.log({
-    provider,
-    signer,
-    transactionContract,
-  });
 };
 
 export const TransactionProvider = ({ children }) => {
@@ -62,7 +56,6 @@ export const TransactionProvider = ({ children }) => {
     try {
       if (!ethereum) return alert("Please install metamask");
       //get data from form
-        
     } catch (error) {
       console.log(error);
       throw new Error("No ethereum object");
